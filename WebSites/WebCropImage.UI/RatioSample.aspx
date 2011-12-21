@@ -13,20 +13,6 @@
 <body>
 
 
-<script type="text/javascript"><!--
-google_ad_client = "pub-2309055439282908";
-/* 468x60, created 12/27/08 */
-google_ad_slot = "5921922704";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
-
-
     <form id="form1" runat="server">
     
     <div>                
@@ -34,6 +20,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <cs:CropImage ID="wci1" runat="server" 
             Image="Image1"            
             Ratio="1/1"
+            FixedAspectRatio="true"
             X="150"           
             Y="150"           
              />                
@@ -56,22 +43,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
     
     
-    
-    
-    
-    
-    <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-    var pageTracker = _gat._getTracker("UA-6577322-1");
-    pageTracker._setDomainName("samples.cemsisman.com");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-
     
     
 </body>

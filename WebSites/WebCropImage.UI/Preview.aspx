@@ -33,40 +33,20 @@
             Y2="150"            
             EnablePreview="true"
             PreviewImageID="preview"
-            PreviewWidht ="100"
+            PreviewWidth ="100"
             PreviewHeight="100"
              />   
         
     </p>
     
-    <div style="width:100px;height:100px;overflow:hidden;margin-bottom:10px;">
-        <img src="images/328.jpg" id="preview" alt="" /> 
-    </div> 
-    
+    <asp:Panel ID="preview" runat="server">
+    </asp:Panel>
 
 
     
     </form>
     
     
-    
-    
-    
-    
-    
-    
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-6577322-1");
-        pageTracker._setDomainName("samples.cemsisman.com");
-        pageTracker._trackPageview();
-    } catch (err) { }</script>
-
-
 
 </body>
 </html>

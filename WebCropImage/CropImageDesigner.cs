@@ -15,7 +15,7 @@ namespace CS.Web.UI
     {
 
         /// <summary>
-        /// 
+        /// It's a dimensionless control, no need for resizing
         /// </summary>
         public override bool AllowResize
         {
@@ -25,6 +25,7 @@ namespace CS.Web.UI
             }
         }
 
+        
 
         /// <summary>
         /// 
