@@ -17,49 +17,7 @@ using System.Net;
 namespace CS.Web.UI {
     public partial class CropImage : CompositeControl, INamingContainer {
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public delegate void CropImageEventHandler(Object sender, CropImageEventArgs e);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public event CropImageEventHandler Cropped;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public event CropImageEventHandler Cropping;
-
-
-        string cropButton;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Bindable(true)]
-        [Category("CS")]
-        [IDReferenceProperty(typeof(Button))]
-        public string CropButton {
-            get { return cropButton; }
-            set { cropButton = value; }
-        }
-
-
-        string cropButtonID;
-        /// <summary>
-        /// 
-        /// </summary>
-        [Bindable(true)]
-        [DefaultValue("")]
-        [Category("CS")]
-        public string CropButtonID {
-            get { return cropButtonID; }
-            set { cropButtonID = value; }
-        }
-
-
+    
         private bool serverSizeResize = false;
         /// <summary>
         /// If true, server-side resizing will be used instead of client-size resizing when display the image to be cropped. 

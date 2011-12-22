@@ -16,13 +16,15 @@ associated enumerations. The default behavior for JQuery inclusion has changed t
 version, falling back to the embedded file. Other files default to WebResource.axd method. All behavior can be modified through the enumerations. You can even turn
  all (or individual) file inclusion off, and manually include the files for maximum control.
 
+webcropimage.js has been introduced - correct preview functionality requires several pages of code, so it has been placed into a cachable javascript resource file.
+
 Removed GetMimeType - unreliable method of determining photo format, due to GDI bugs. Also will report PNG 
 incorrectly on windows 7. New code will first examine file extension, followed by GDI format. 
 Will also support PSD, RAW, and 24+ other formats if the FreeImageDecoder or WicDecoder plugins are installed.
 
 The properties X2 and Y2 have been made readonly to prevent conflicting or inconsistent X/X2/W and Y/Y2/H values. 
 
-Cropping rectangle should now default to the entire image instead of (10,10,20,20).
+No default cropping rectangle is required, and the default (10,10,20,20) has been removed.
 
 Default Jpeg save quality is now 90, not 100 (much better file size, indistinguishable visual quality). This can be adjusted with the new JpegQuality property.
 
@@ -30,5 +32,16 @@ Added ForceImageFormat property if users want to force conversion to a specific 
 
 Added FixedAspectRatio and FixedAspectRatioCheckboxID so that aspect ratio locking can either be enabled via a property or dynamically, client-side, via a linked checkbox.
 
-TODO: fix loading of X,X2, Y, Y2 values to happen properly
+Users must now set FixedAspectRatio="true" when setting 'Ratio'. This breaking change was required to support FixedAspectRatioCheckboxID. 
+
+Users must now set PreviewImageId to the ID of a server-side <div runat="server"/> or <asp:Panel runat="server" />. It cannot be the ID of an <img/> or <asp:Image /> control. 
+The div/panel may have a width/height (which will be changed if PreviewWidth/PreviewHeight is set explicitly) , but doesn't need to contain anything. 
+
+Users may now enable ServerSideResizing="true" to dynamically resize images before cropping them to (greatly!) improve page load times, reduce browser memory usage, increase speed, and stop crashing mobile devices. 
+JCrop vNext will support touchscreen devices.
+
+Removed Cropped and Cropping events; they are now redundant as X,Y, W,H, X2, Y2 are updated on postback and can be modified before calling Crop(). 
+
+Removed many unused and unreferenced properties and members.
+
 
