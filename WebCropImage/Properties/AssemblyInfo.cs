@@ -11,7 +11,7 @@ using System.Web.UI;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("cemsisman.com")]
 [assembly: AssemblyProduct("Web Crop Image")]
-[assembly: AssemblyCopyright("Copyright © 2008-2009")]
+[assembly: AssemblyCopyright("Copyright © 2008-2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: TagPrefix("CS.Web.UI", "cs")]
@@ -34,5 +34,5 @@ using System.Web.UI;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.1.5.0")]
-[assembly: AssemblyFileVersion("4.1.5.0")]
+[assembly: AssemblyVersion("5.0.0")]
+[assembly: AssemblyFileVersion("5.0.0.0")]
