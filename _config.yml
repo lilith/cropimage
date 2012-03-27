@@ -1,2 +1,20 @@
 auto: true
 permalink: pretty
+
+domain: cropimage.net
+title: CropImage.NET
+author: Nathanael Jones
+email: computer.linguist@gmail.com
+
+google_analytics:
+   account: UA-5218175-8
+
+github:
+   username: nathanaeljones
+
+# disqus:
+#   id: disqusid
+
+
+# feedburner:
+#   id: feedburnerid
