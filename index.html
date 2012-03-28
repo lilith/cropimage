@@ -5,26 +5,31 @@ layout: default
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
   <h1>CropImage.NET</h1>
-  <p>The ASP.NET cropping control.</p>
-  <p><a class="btn btn-primary btn-large" href="https://github.com/nathanaeljones/cropimage/zipball/master">Download source &amp; binaries &raquo;</a></p>
+  <p>Let users crop. CropImage.NET is a drop in replacement for <a href="http://webcropimage.codeplex.com/">the old ASP.NET WebCropImage control</a>. No more memory leaks, much better Javascript, and a consistent API that is 95% compatible with WebCropImage (We broke compatibility on a number of features by actually implementing them).</p>
+  <p>
+		<a class="btn btn-primary btn-large" href="https://github.com/nathanaeljones/cropimage/zipball/master">Download source &amp; binaries &raquo;</a>
+		<a class="btn btn-secondary btn-large" href="/differences">Discover the differences &raquo;</a>
+	</p>
 </div>
 
 <!-- Example row of columns -->
 <div class="row">
   <div class="span4">
-    <h2>Heading</h2>
-     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <h2>Compatible</h2>
+     <p>Designed for .NET 2 through .NET 4, rest assured it will work with your project.</p>
     <p><a class="btn" href="#">View details &raquo;</a></p>
   </div>
   <div class="span4">
-    <h2>Heading</h2>
-     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
+    <h2>Don't want the wrapper?</h2>
+			<p>If you want more or less than CropImage.NET, StudioJS is what you need. 
+				It's a collection of jQuery plugins that can provide anything from CropImage.NET to a full-fledged image studio.
+				</p>
+    <p><a class="btn" href="{{ site.links.studiojs }}">Go to StudioJS &raquo;</a></p>
  </div>
   <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
+    <h2>Don't need a UI?</h2>
+    <p>The compact ImageResizing.NET library is the safe way to crop, resize, and process your images. It's designed for server-side use and has a simple API. It's what CropImage.NET uses.</p>
+    <p><a class="btn" href="http://imageresizing.net/">Go to imageresizing.net &raquo;</a></p>
   </div>
 </div>
 

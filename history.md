@@ -1,13 +1,16 @@
+---
+layout: default
+---
 
-# History of CropImage.NET and WebCropImage.NET
+# History
 
-## Overview
+## Why CropImage and WebCropImage split
 
 For the ethical developer, permanently branching a project is a last resort. You exhaust every other alternative first, because even if the license *permits* branching, it's not really a *nice* thing to do. 
 
 When I <del>updated</del> rewrote WebCropImage.NET **at Cem Sisman's request**, I didn't expect that I would be releasing it myself. But after weeks, then a month passed, and he still hadn't bothered to reply to a **single one** of my 7 e-mails about the completed revision, I posted it on the Discussion page for other people to look at. Cem promptly deleted the thread and send me a one-line e-mail: "I appricate your work on this but placing such a discussion is not acceptable, you should have asked my permission." Oh goodness... I guess I should have sent an eighth e-mail first? When I see your Skype and Google Chat status is online every day, but you don't acknowledge my messages, I am *eventually* going to give up on you. Jan 22 was the first and last day I heard from him, and as far as I know, he never bothered to look at the revision he requested.
 
-I can't emphasize how unprofessional it is to ask an open-source contributor to perform work, and then ignore them. If you solicit help, at least reply to their e-mails. It's OK to say "I'm busy this week, I'll look at it around [Insert Date Here]." But coldly hitting the Archive button on source code contributions is a sure way to kill the community around your project. It's stupid to do that to *unsolicited* contributions. If you want to grow a community, at least *pretend* to care, so others will keep things rolling. Milking for donations while you fail to handle merge duties is terribly poor form.
+I can't emphasize how unprofessional it is to ask an open-source contributor to perform work, and then ignore them. If you solicit help, at least reply to their e-mails. It's OK to say "I'm busy this week, I'll look at it around \[Insert Date Here\]." But coldly hitting the Archive button on source code contributions is a sure way to kill the community around your project. It's stupid to do that to *unsolicited* contributions. If you want to grow a community, at least *pretend* to care, so others will keep things rolling. Milking for donations while you fail to handle merge duties is terribly poor form.
 
 ## How I got involved
 

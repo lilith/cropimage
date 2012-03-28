@@ -16,17 +16,17 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<style>
 	body {
 	  padding-top: 60px;
 	  padding-bottom: 40px;
 	}
 	</style>
-	<link rel="stylesheet" href="css/bootstrap-responsive.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="/css/style.css">
 
-	<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	<script src="/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -39,15 +39,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">{{ site.title }}</a>
+          <a class="brand" href="/">{{ site.title }}</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-							<li><a href="/download">Download</a></li>
-							<li><a href="/support">Docs</a></li>
+							<li><a href="/forums">Forums</a></li>
+							<li><a href="/support">Support</a></li>
               <li><a href="/history">History</a></li>
 							<li><a href="/future">Future</a></li>
-              <li><a href="/support">Support</a></li>
+							<li>On Github</li>
+							<li><a href="{{ site.github.basepath }}">On GitHub:</a></li>
+							<li><a href="{{ site.github.wiki }}">Project Wiki</a></li>
+							<li><a href="{{site.github.issues}}">Issues</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -64,12 +67,12 @@
 
     </div> <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
-<script src="js/libs/bootstrap/transition.js"></script>
-<script src="js/libs/bootstrap/collapse.js"></script>
+<script src="/js/libs/bootstrap/transition.js"></script>
+<script src="/js/libs/bootstrap/collapse.js"></script>
 
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
 {% if site.google_analytics %}
 <script>
 	var _gaq=[['_setAccount','{{ site.google_analytics.account }}'],['_trackPageview']];
@@ -80,7 +83,7 @@
  {% endif %}
 
  {% if site.github %}
-   <a href="http://github.com/{{ site.github.username }}"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:5000;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+   <a href="{{site.github.basepath}}"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:5000;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
  {% endif %}
 </body>
 </html>

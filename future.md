@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 
 # The Future of CropImage.NET
 

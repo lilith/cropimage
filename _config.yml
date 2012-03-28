@@ -4,13 +4,20 @@ permalink: pretty
 domain: cropimage.net
 title: CropImage.NET
 author: Nathanael Jones
-email: computer.linguist@gmail.com
+email: "computer.linguist@gmail.com"
 
 google_analytics:
-   account: UA-5218175-8
+  account: UA-5218175-8
 
 github:
-   username: nathanaeljones
+  username: nathanaeljones
+  project: cropimage
+  basepath: https://github.com/nathanaeljones/cropimage
+  wiki: https://github.com/nathanaeljones/cropimage/wiki
+  issues: https://github.com/nathanaeljones/cropimage/issues
+
+links:
+  studiojs: https://github.com/nathanaeljones/studiojs
 
 # disqus:
 #   id: disqusid
