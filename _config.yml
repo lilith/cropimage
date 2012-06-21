@@ -2,7 +2,7 @@ auto: true
 permalink: pretty
 
 domain: cropimage.net
-title: CropImage.NET
+title: CropImage.NET - Simple image cropping for .NET
 author: Nathanael Jones
 email: "computer.linguist@gmail.com"
 
