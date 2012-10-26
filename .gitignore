@@ -1,1 +1,7 @@
-/*.suo
+*.suo
+*.suo
+*.user
+*/obj/*
+._*
+.DS*
+/Example/bin
