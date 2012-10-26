@@ -6,12 +6,12 @@ using System.Web.UI;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Web Crop Image")]
-[assembly: AssemblyDescription("Web based crop image control by Cem Sisman. cemsisman.com")]
+[assembly: AssemblyTitle("CropImage.NET")]
+[assembly: AssemblyDescription("Image cropping control - maintained by Nathanael Jones, started by Cem Sisman as WebCropImage.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("cemsisman.com")]
-[assembly: AssemblyProduct("Web Crop Image")]
-[assembly: AssemblyCopyright("Copyright © 2008-2011")]
+[assembly: AssemblyCompany("Nathanael Jones")]
+[assembly: AssemblyProduct("CropImage.NET")]
+[assembly: AssemblyCopyright("Copyright © 2012 Nathanael Jones, 2008-2011 Cem Sisman (MIT license)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: TagPrefix("CS.Web.UI", "cs")]
@@ -34,5 +34,5 @@ using System.Web.UI;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.0.0")]
-[assembly: AssemblyFileVersion("5.0.0.0")]
+[assembly: AssemblyVersion("5.5.0")]
+[assembly: AssemblyFileVersion("5.5.0.0")]

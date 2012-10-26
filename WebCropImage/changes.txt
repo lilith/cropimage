@@ -1,4 +1,18 @@
-﻿CropImage.DebugMode will cause human-readable javascript files to be used instead of minified versions.
+﻿
+## Changes in V5.5
+
+Rewrote webcropimage.js
+Updated to jQuery 1.8.2
+Added ImageID property alias.
+Updated documentation
+Updated assembly information
+Rewrote all samples
+Fixed bug breaking multiple instances per page
+Added Crop(path, addCorrectExtension) overload.
+
+## Changes in V5.0 
+
+CropImage.DebugMode will cause human-readable javascript files to be used instead of minified versions.
 
 Will use JQuery 1.7.1 instead of 1.3.2
 
@@ -44,4 +58,4 @@ Removed Cropped and Cropping events; they are now redundant as X,Y, W,H, X2, Y2 
 
 Removed many unused and unreferenced properties and members.
 
-
+## No changelog information prior to 5.0 release (first under Nathanael Jones)

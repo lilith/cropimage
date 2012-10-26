@@ -144,7 +144,7 @@ namespace CS.Web.UI {
 
         private string imageId;
         /// <summary>
-        /// ID of the asp.net Image control to be cropped.
+        /// ID of the asp.net Image control to be cropped. (Duplicate of ImageID)
         /// </summary>
         [Bindable(true)]
         [DefaultValue("")]
@@ -158,6 +158,23 @@ namespace CS.Web.UI {
                 imageId = value;
             }
         }
+        /// <summary>
+        /// ID of the asp.net Image control to be cropped. (Duplicate of Image)
+        /// </summary>
+        [Bindable(true)]
+        [DefaultValue("")]
+        [Category("CS")
+            , Description("ID of the asp.net Image control to be cropped.")]
+        public string ImageID {
+            get {
+                return imageId;
+            }
+            set {
+                imageId = value;
+            }
+        }
+
+
 
 
         private string maxSize;
@@ -349,7 +366,7 @@ namespace CS.Web.UI {
 
         bool isInUpdatePanel;
         /// <summary>
-        /// Set this to true if the control is within an update panel, so the scripts can be registered properly.
+        /// Set this to true if the control is within an update panel, so the scripts can be registered properly. Defaults to false.
         /// </summary>
         [Bindable(true)]
         [DefaultValue("false")]

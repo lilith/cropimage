@@ -10,7 +10,10 @@ using System.Web.UI.Design;
 using System.Web.UI.Design.WebControls;
 
 namespace CS.Web.UI
-{
+{   
+    /// <summary>
+    /// 
+    /// </summary>
     public class CropImageDesigner : CompositeControlDesigner
     {
 

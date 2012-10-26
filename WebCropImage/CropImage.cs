@@ -21,8 +21,8 @@ using System.Web.Hosting;
 [assembly: WebResource("CS.Web.UI.jquery.Jcrop.css", "text/css")]
 [assembly: WebResource("CS.Web.UI.jquery.Jcrop.js", "text/javascript")]
 [assembly: WebResource("CS.Web.UI.jquery.Jcrop.min.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.jquery-1.7.1.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.jquery-1.7.1.min.js", "text/javascript")]
+[assembly: WebResource("CS.Web.UI.jquery-1.8.2.js", "text/javascript")]
+[assembly: WebResource("CS.Web.UI.jquery-1.8.2.min.js", "text/javascript")]
 [assembly: WebResource("CS.Web.UI.webcropimage.js", "text/javascript")]
 [assembly:TagPrefix("CS.Web.UI","cs")]
 namespace CS.Web.UI
@@ -38,12 +38,15 @@ namespace CS.Web.UI
     public partial class CropImage : CompositeControl, INamingContainer
     {
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnLoad(EventArgs e) {
             //Updated X,Y, W, H, X2, Y2 values if present in postback
             if (Page.IsPostBack && !string.IsNullOrEmpty(CroppedUrl)) {
                 NameValueCollection s = ImageResizer.Util.PathUtils.ParseQueryStringFriendlyAllowSemicolons(CroppedUrl);
-                double[] vals = Utils.parseCrop(s["crop"]).Value;
+                double[] vals = ParseUtils.ParseList<double>(s["crop"],null,4);
                 if (vals != null) {
                     this.X = (int)vals[0];
                     this.Y = (int)vals[1];
@@ -53,7 +56,11 @@ namespace CS.Web.UI
             }
             base.OnLoad(e);
         }
-
+        /// <summary>
+        /// Gets a stream from the given HTTP URI. No redirect support
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <returns></returns>
         public Stream GetUriStream(Uri uri) {
 
             HttpWebResponse response = null;
@@ -71,10 +78,18 @@ namespace CS.Web.UI
         }
 
         /// <summary>
-        /// Crops the original image and saves it to the specified path. Works even with remote URLs.
+        /// Crops the original image and saves it to the specified path. If the specified path doesn't contain a valid image extension, it will be appended
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="destPath"></param>
         public void Crop(string destPath) {
+            Crop(destPath, !ImageResizer.Configuration.Config.Current.Pipeline.IsAcceptedImageType(destPath));
+        }
+        /// <summary>
+        /// Crops the original image and saves it to the specified path.
+        /// </summary>
+        /// <param name="destPath"></param>
+        /// <param name="appendCorrectExtension">If true, the appropriate image extension will be added</param>
+        public void Crop(string destPath, bool appendCorrectExtension) {
 
             string path = ImagePath != null ? ImagePath : CroppedUrl;
 
@@ -101,6 +116,7 @@ namespace CS.Web.UI
                 ImageJob j = new ImageJob();
                 j.Source = s != null ? (object)s : path;
                 j.Dest = destPath;
+                j.AddFileExtension = appendCorrectExtension;
                 j.Settings = new ResizeSettings(CroppedUrlQuerystring);
 
                 NameValueCollection data = CroppedUrlQuerystring;
@@ -152,7 +168,7 @@ namespace CS.Web.UI
         public double CropXUnits {
             get {
                 return string.IsNullOrEmpty(CroppedUrl) ? 0 :
-                    Utils.parseCropUnits(CroppedUrlQuerystring["cropxunits"]).Value;
+                    ParseUtils.ParsePrimitive<double>(CroppedUrlQuerystring["cropxunits"],0);
             }
         }
         /// <summary>
@@ -162,7 +178,7 @@ namespace CS.Web.UI
         public double CropYUnits {
             get {
                 return string.IsNullOrEmpty(CroppedUrl) ? 0 :
-                    Utils.parseCropUnits(CroppedUrlQuerystring["cropyunits"]).Value;
+                    ParseUtils.ParsePrimitive<double>(CroppedUrlQuerystring["cropyunits"], 0);
             }
         }
 
@@ -170,6 +186,7 @@ namespace CS.Web.UI
         /// 
         /// </summary>
         protected override void CreateChildControls() {
+      
             //Add the jquery/jcrop includes
             AddFileReferences();
 
@@ -266,17 +283,17 @@ namespace CS.Web.UI
             }
             sb.Append("});});");
             sb.Append(@"</script>");
-
+            
 
             if (isInUpdatePanel) {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType()
-                    , "cropInit"
+                    , "cropInit" + this.ClientID
                     , sb.ToString(), false);
                 ScriptManager.RegisterHiddenField(this, HiddenFieldClientId, resolvedUrl);
 
             } else {
                 Page.ClientScript.RegisterClientScriptBlock(this.GetType()
-                    , "cropInit"
+                    , "cropInit" + this.ClientID
                     , sb.ToString(), false);
                 Page.ClientScript.RegisterHiddenField(HiddenFieldClientId, resolvedUrl);
             }
@@ -309,7 +326,7 @@ namespace CS.Web.UI
 
             ClientScriptManager cs = Page.ClientScript;
 
-            string jQueryVer = "1.7.1";
+            string jQueryVer = "1.8.2";
             string ext = (DebugMode ? ".min.js" : ".js");
 
             if (string.IsNullOrEmpty(this.ScriptPath)) this.ScriptPath = "~/scripts/";
