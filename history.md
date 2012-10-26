@@ -23,3 +23,8 @@ We had a few Skype calls about the development in August, and we seemed to agree
 So on Dec. 5th, I offered to help, and asked to be made a project developer on the CodePlex.com site. He agreed (to quote) "yes I can add you as a developer. that would be great to have you".
 
 After that, I started revising WebCropImage with the changes we had discussed. On December 20th, I shared my new code repository with him via GitHub (since the old SVN repository was corrupt), and had a beta release ready on the 22nd. Unfortunately, at that point, he was so incredibly busy, that he lacked the time to even reply "I'm busy" to any of my e-mails. 
+
+## October 2012 Update
+
+At first, it appeard that webcropimage.codeplex.com was 'hidden' for maintenance. However, a few months later it became clear that Cem Sisman had deleted the project altogether. 
+I've reopened the project on codeplex in order for there to be fewer broken links.
