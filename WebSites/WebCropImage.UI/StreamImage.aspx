@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StreamImage.aspx.cs" Inherits="StreamImage" %>
