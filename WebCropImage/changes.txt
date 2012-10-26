@@ -1,4 +1,8 @@
-﻿
+﻿## Changes in V6.0
+
+Renamed namespaces and assemblies to "Imazen.Crop" instead of "CS.Web.UI.CropImage".
+Renamed sample to Example
+
 ## Changes in V5.5
 
 Rewrote webcropimage.js

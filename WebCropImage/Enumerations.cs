@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CS.Web.UI {
+namespace Imazen.Crop {
     /// <summary>
     /// jquery include method
     /// </summary>

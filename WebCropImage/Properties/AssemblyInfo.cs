@@ -14,7 +14,7 @@ using System.Web.UI;
 [assembly: AssemblyCopyright("Copyright © 2012 Nathanael Jones, 2008-2011 Cem Sisman (MIT license)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: TagPrefix("CS.Web.UI", "cs")]
+[assembly: TagPrefix("Imazen.Crop", "ic")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -34,5 +34,5 @@ using System.Web.UI;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.5.0")]
-[assembly: AssemblyFileVersion("5.5.0.0")]
+[assembly: AssemblyVersion("6.0.0")]
+[assembly: AssemblyFileVersion("6.0.0.0")]

@@ -18,14 +18,14 @@ using System.Web.Hosting;
 
 
 
-[assembly: WebResource("CS.Web.UI.jquery.Jcrop.css", "text/css")]
-[assembly: WebResource("CS.Web.UI.jquery.Jcrop.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.jquery.Jcrop.min.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.jquery-1.8.2.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.jquery-1.8.2.min.js", "text/javascript")]
-[assembly: WebResource("CS.Web.UI.webcropimage.js", "text/javascript")]
-[assembly:TagPrefix("CS.Web.UI","cs")]
-namespace CS.Web.UI
+[assembly: WebResource("Imazen.Crop.jquery.Jcrop.css", "text/css")]
+[assembly: WebResource("Imazen.Crop.jquery.Jcrop.js", "text/javascript")]
+[assembly: WebResource("Imazen.Crop.jquery.Jcrop.min.js", "text/javascript")]
+[assembly: WebResource("Imazen.Crop.jquery-1.8.2.js", "text/javascript")]
+[assembly: WebResource("Imazen.Crop.jquery-1.8.2.min.js", "text/javascript")]
+[assembly: WebResource("Imazen.Crop.webcropimage.js", "text/javascript")]
+[assembly:TagPrefix("Imazen.Crop","ic")]
+namespace Imazen.Crop
 {
     /// <summary>
     /// 
@@ -334,27 +334,27 @@ namespace CS.Web.UI
 
             string jQueryGoogle = "<script src=\"//ajax.googleapis.com/ajax/libs/jquery/" + jQueryVer + "/jquery" + ext + "\" type=\"text/javascript\"></script>\n";
             string jQueryFolder = "<script src=\"" + ResolveClientUrl(this.ScriptPath.TrimEnd('/') + "/jquery-" + jQueryVer + ext) + "\" type=\"text/javascript\"></script>\n";
-            string jQueryResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.jquery-" + jQueryVer + ext) + "\" type=\"text/javascript\"></script>\n";
+            string jQueryResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.jquery-" + jQueryVer + ext) + "\" type=\"text/javascript\"></script>\n";
 
             string jQueryFallbackResource = "\n<script>!window.jQuery && document.write(unescape('%3Cscript src=\"" +
-                        cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.jquery-" + jQueryVer + ext) +
+                        cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.jquery-" + jQueryVer + ext) +
                             "\"%3E%3C/script%3E'))</script>\n";
 
             string jCropFolder = "<script src=\"" + ResolveClientUrl(this.ScriptPath.TrimEnd('/') + "/jquery.Jcrop" + ext) + "\" type=\"text/javascript\"></script>\n";
-            string jCropResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.jquery.Jcrop" + ext) + "\" type=\"text/javascript\"></script>\n";
+            string jCropResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.jquery.Jcrop" + ext) + "\" type=\"text/javascript\"></script>\n";
 
             string jCropFallbackResource = "\n<script>!$.Jcrop && document.write(unescape('%3Cscript src=\"" +
-                        cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.jquery.Jcrop" + ext) +
+                        cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.jquery.Jcrop" + ext) +
                             "\"%3E%3C/script%3E'))</script>\n";
 
             string webCropFolder = "<script src=\"" + ResolveClientUrl(this.ScriptPath.TrimEnd('/') + "/webcropimage.js") + "\" type=\"text/javascript\"></script>\n";
-            string webCropResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.webcropimage.js") + "\" type=\"text/javascript\"></script>\n";
+            string webCropResource = "<script src=\"" + cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.webcropimage.js") + "\" type=\"text/javascript\"></script>\n";
 
             string webCropFallbackResource = "\n<script>!window.webcropimage && document.write(unescape('%3Cscript src=\"" +
-                        cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.webcropimage.js") +
+                        cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.webcropimage.js") +
                             "\"%3E%3C/script%3E'))</script>\n";
 
-            string jCropCssResource = cs.GetWebResourceUrl(this.GetType(), "CS.Web.UI.jquery.Jcrop.css");
+            string jCropCssResource = cs.GetWebResourceUrl(this.GetType(), "Imazen.Crop.jquery.Jcrop.css");
             string jCropCssFolder = ResolveClientUrl(this.ScriptPath.TrimEnd('/') + "/jquery.Jcrop.css");
 
             string jQueryBlock = null;

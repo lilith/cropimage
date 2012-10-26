@@ -14,7 +14,7 @@ using System.Net;
 
 
 
-namespace CS.Web.UI {
+namespace Imazen.Crop {
     public partial class CropImage : CompositeControl, INamingContainer {
 
     

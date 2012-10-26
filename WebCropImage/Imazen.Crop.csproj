@@ -8,8 +8,8 @@
     <ProjectGuid>{291BC11E-B8B4-4638-A800-5E620F638425}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CS.Web.UI</RootNamespace>
-    <AssemblyName>CS.Web.UI.CropImage</AssemblyName>
+    <RootNamespace>Imazen.Crop</RootNamespace>
+    <AssemblyName>Imazen.Crop</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Nonshipping>true</Nonshipping>
@@ -35,7 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Binaries\Debug\CS.Web.UI.CropImage.xml</DocumentationFile>
+    <DocumentationFile>..\Binaries\Debug\Imazen.Crop.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,7 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Binaries\Release\CS.Web.UI.CropImage.XML</DocumentationFile>
+    <DocumentationFile>..\Binaries\Release\Imazen.Crop.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ImageResizer, Version=3.1.2.88, Culture=neutral, processorArchitecture=MSIL">

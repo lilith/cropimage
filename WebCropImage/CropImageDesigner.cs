@@ -9,7 +9,7 @@ using System.ComponentModel.Design;
 using System.Web.UI.Design;
 using System.Web.UI.Design.WebControls;
 
-namespace CS.Web.UI
+namespace Imazen.Crop
 {   
     /// <summary>
     /// 
